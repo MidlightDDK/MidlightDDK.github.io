@@ -55,8 +55,7 @@ tools/                         sources for generated files (not deployed)
 ## Decisions and status
 
 1. **Contact email:** `majed.azar7@gmail.com` (the résumé's address) is correct. Don't change it.
-2. **GitHub profile:** done: descriptions, homepage links and topics on `filinglens`, `browser-analyst` and `pocketsql`; a profile README (`MidlightDDK/MidlightDDK`) aligned with the résumé; and the profile name, bio and website (set by the user). Still open:
-   - Pin the three project repos (none pinned as of 2026-09-28). There's no API for this; use "Customize your pins" on the profile. Check with `gh api graphql -f query='{user(login:"MidlightDDK"){pinnedItems(first:6){nodes{... on Repository{name}}}}}'`.
+2. **GitHub profile:** done: descriptions, homepage links and topics on `filinglens`, `browser-analyst` and `pocketsql`; a profile README (`MidlightDDK/MidlightDDK`) aligned with the résumé; the profile name, bio and website (set by the user); and the three project repos pinned (2026-09-28, via the profile's "Customize your pins" dialog, since there's no API for pinning).
 3. **Root URL:** done. The repo is `MidlightDDK.github.io` and every absolute URL points to `https://midlightddk.github.io/`.
 4. **Portfolio link elsewhere:** `resume.txt` now has it. The user is updating LinkedIn (contact info and Featured section) themselves; also any Word/PDF résumé copies and anywhere the old `/portfolio/` link was shared. `resume.txt` is not the render source: the site PDF is built from `tools/resume.html`, so mirror any `resume.txt` edits there (minus the phone number) before running `node tools/render.mjs`.
 5. **Phone number:** never on the public site or PDF.
