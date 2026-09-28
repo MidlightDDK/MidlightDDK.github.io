@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Majed Saliou Azar · AI Engineer (LLM apps, RAG, fine-tuning)</title>
+  <meta name="description" content="AI Engineer with 4+ years of professional software experience. Three live AI apps (RAG, a tool-calling agent, a fine-tuned model), each with held-out evals and CI quality gates. Open to remote roles, UTC+0.">
+  <meta name="author" content="Majed Saliou Azar">
+  <link rel="canonical" href="https://midlightddk.github.io/portfolio/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Majed Saliou Azar · AI Engineer">
+  <meta property="og:description" content="I build AI systems that show their work: RAG with verified citations, an agent that traces every number, and a fine-tuned model that runs offline in the browser.">
+  <meta property="og:url" content="https://midlightddk.github.io/portfolio/">
+  <meta property="og:image" content="https://midlightddk.github.io/portfolio/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Majed Saliou Azar, AI Engineer: headline results from three live AI projects">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f7f7f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0f12" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    // Apply a saved theme before first paint so the page never flashes the wrong one.
+    try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Majed Saliou Azar",
+    "jobTitle": "AI Engineer",
+    "url": "https://midlightddk.github.io/portfolio/",
+    "email": "mailto:majed.azar7@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Lomé", "addressCountry": "TG" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of the People" },
+    "knowsLanguage": ["English", "French"],
+    "knowsAbout": ["Large language models", "Retrieval-augmented generation", "LLM agents", "Tool calling", "LoRA fine-tuning", "Model evaluation", "Python", "TypeScript", "PyTorch", "ONNX", "WebGPU"],
+    "sameAs": [
+      "https://www.linkedin.com/in/azarmajed",
+      "https://github.com/MidlightDDK",
+      "https://huggingface.co/MidlightDDK"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></symbol>
+  </svg>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Majed Saliou Azar, back to top">
+        <span class="brand-mark" aria-hidden="true">MA</span>
+        <span class="brand-name">Majed Saliou Azar</span>
+      </a>
+      <nav aria-label="Sections">
+        <ul class="nav-links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" type="button" id="theme-toggle" aria-label="Switch to dark theme">
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
+        </button>
+        <a class="btn btn-small" href="Majed-Saliou-Azar-Resume.pdf" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
+          Résumé
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="status"><span class="pulse" aria-hidden="true"></span>Open to AI Engineer roles · Remote, worldwide</p>
+        <p class="kicker">Majed Saliou Azar · AI Engineer</p>
+        <h1 id="hero-title">I build AI systems that <span class="hl">show their work.</span></h1>
+        <p class="lede">
+          LLM applications, retrieval-augmented generation, and fine-tuned models, shipped as live products.
+          My answers cite their sources, my agents trace every number to the query that produced it, and every
+          project ships with a held-out eval and a CI gate that fails when quality drops.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#work">See the projects
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m0 0-6-6m6 6 6-6"/></svg>
+          </a>
+          <a class="btn" href="Majed-Saliou-Azar-Resume.pdf" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
+            Download résumé
+          </a>
+          <a class="btn btn-ghost" href="mailto:majed.azar7@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+            Email me
+          </a>
+        </div>
+        <ul class="facts" aria-label="At a glance">
+          <li><strong>4+ years</strong><span>shipping production software</span></li>
+          <li><strong>3 live</strong><span>AI apps with public evals</span></li>
+          <li><strong>MSIT</strong><span>Information Technology, 2026</span></li>
+          <li><strong>5th in Africa</strong><span>Dev Champion 2022</span></li>
+        </ul>
+      </div>
+
+      <aside class="report" aria-labelledby="report-title">
+        <div class="report-head">
+          <span class="report-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span id="report-title" class="report-file">eval-results.json</span>
+          <span class="report-tag">held-out · reproducible</span>
+        </div>
+        <table class="report-table">
+          <caption class="sr-only">Headline results from three projects</caption>
+          <thead>
+            <tr><th scope="col">Project</th><th scope="col">Metric</th><th scope="col">Result</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><a href="#filinglens">FilingLens</a></th>
+              <td>recall@10</td>
+              <td class="num">85.5%</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="#filinglens">FilingLens</a></th>
+              <td>answer accuracy</td>
+              <td class="num">82.9%</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="#browser-analyst">Browser Analyst</a></th>
+              <td>agent task success</td>
+              <td class="num">94%</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="#browser-analyst">Browser Analyst</a></th>
+              <td>attacks that leaked data</td>
+              <td class="num">0 / 24</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="#pocketsql">PocketSQL</a></th>
+              <td>SQL accuracy</td>
+              <td class="num"><span class="from">30.9</span> → 49.3%</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="report-foot"><span class="ok" aria-hidden="true">✓</span> 3 live demos · daily smoke tests · $0/month to run</p>
+      </aside>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Three AI products, built end to end</h2>
+          <p class="section-lede">
+            Data pipeline, retrieval or training, evaluation, security, UI, and deployment: I built each one myself.
+            All three are live and free to try, and each README documents what didn't work as carefully as what did.
+          </p>
+        </header>
+
+        <!-- FilingLens -->
+        <article class="project" id="filinglens" aria-labelledby="fl-title">
+          <div class="project-top">
+            <a class="shot" href="https://filinglens.azar-majed7.workers.dev" target="_blank" rel="noopener">
+              <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span class="shot-url">filinglens.azar-majed7.workers.dev</span></span>
+              <img src="assets/filinglens.webp" width="1512" height="946" loading="lazy" decoding="async"
+                   alt="FilingLens answering how NVIDIA's R&D expense changed between fiscal 2024 and 2025. The answer cites passage 2 and carries a Verified badge; the AI judge confirms 1 of 1 cited sentences is supported.">
+            </a>
+            <div class="project-intro">
+              <p class="tag"><span>01</span> RAG · Retrieval &amp; grounding</p>
+              <h3 id="fl-title">FilingLens</h3>
+              <p class="pitch">
+                Citation-verified Q&amp;A over SEC 10-K filings. Every answer sentence cites the passage it came from,
+                sentences the sources don't support are flagged, and questions the filings can't answer are declined.
+              </p>
+              <dl class="metrics">
+                <div><dt>Recall@10</dt><dd>85.5%</dd><p>held-out test split, 74 items</p></div>
+                <div><dt>Answer accuracy</dt><dd>82.9%</dd><p>35-question test sample</p></div>
+                <div><dt>Search latency</dt><dd>33 ms</dd><p>median, in the browser</p></div>
+              </dl>
+              <div class="links">
+                <a class="btn btn-primary btn-small" href="https://filinglens.azar-majed7.workers.dev" target="_blank" rel="noopener">Live demo <span aria-hidden="true">↗</span></a>
+                <a class="btn btn-small" href="https://youtu.be/P4qqevx9zMk" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>81-second video</a>
+                <a class="btn btn-small" href="https://filinglens.azar-majed7.workers.dev/evals" target="_blank" rel="noopener">Eval dashboard <span aria-hidden="true">↗</span></a>
+                <a class="btn btn-small btn-ghost" href="https://github.com/MidlightDDK/filinglens" target="_blank" rel="noopener">
+                  <svg class="fill" viewBox="0 0 16 16" aria-hidden="true"><use href="#i-github"/></svg>Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <div class="built">
+              <h4>What I built</h4>
+              <ul class="checks">
+                <li>Python ingestion of <strong>24 filings from 12 companies</strong> with structure-aware chunking, then hybrid search: BM25 and dense embeddings fused with Reciprocal Rank Fusion, plus company and fiscal-year filters.</li>
+                <li>A deterministic verifier that runs in the browser: a sentence is <em>verified</em> only if it cites a passage and every number in it appears there. An optional AI judge agrees with reference labels <strong>95.5% of the time (κ 0.86)</strong>.</li>
+                <li>A Cloudflare Worker gateway with a provider fallback chain (Workers AI → Groq → Gemini), a KV answer cache, a Turnstile bot check, and rate limits. It runs for <strong>$0</strong>, with no vector database.</li>
+                <li>A 211-question eval set, split dev/test <em>before</em> tuning. CI fails any push that drops recall@10 by more than 2 points.</li>
+              </ul>
+              <ul class="stack" aria-label="Tech stack">
+                <li>Python</li><li>TypeScript</li><li>BM25</li><li>bge-small (ONNX, q8)</li><li>RRF</li><li>Cloudflare Workers</li><li>Playwright</li><li>GitHub Actions</li>
+              </ul>
+            </div>
+            <div class="evidence">
+              <figure class="chart">
+                <figcaption>
+                  <strong>Every retrieval choice was measured</strong>
+                  <span>Recall@10 on the held-out test split, by setup. Higher is better.</span>
+                </figcaption>
+                <table>
+                  <thead class="sr-only"><tr><th scope="col">Retrieval setup</th><th scope="col">Recall@10</th></tr></thead>
+                  <tbody>
+                    <tr class="is-hl"><th scope="row">Hybrid + filters <em>shipped</em></th><td><span class="bar" style="--v:85.5"></span><span class="val">85.5%</span></td></tr>
+                    <tr><th scope="row">+ cross-encoder rerank</th><td><span class="bar" style="--v:80.1"></span><span class="val">80.1%</span></td></tr>
+                    <tr><th scope="row">Dense only</th><td><span class="bar" style="--v:79.7"></span><span class="val">79.7%</span></td></tr>
+                    <tr><th scope="row">BM25 only</th><td><span class="bar" style="--v:73.3"></span><span class="val">73.3%</span></td></tr>
+                    <tr><th scope="row">No metadata filters</th><td><span class="bar" style="--v:72.6"></span><span class="val">72.6%</span></td></tr>
+                    <tr><th scope="row">Fixed 350-token chunks</th><td><span class="bar" style="--v:69.9"></span><span class="val">69.9%</span></td></tr>
+                  </tbody>
+                </table>
+              </figure>
+              <p class="lesson"><strong>What didn't work:</strong> a cross-encoder reranker lowered recall@10 by 5 points on test and took about 7&nbsp;s per query in WASM, so it stayed out of production.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Browser Analyst -->
+        <article class="project" id="browser-analyst" aria-labelledby="ba-title">
+          <div class="project-top">
+            <a class="shot" href="https://browser-analyst.azar-majed7.workers.dev" target="_blank" rel="noopener">
+              <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span class="shot-url">browser-analyst.azar-majed7.workers.dev</span></span>
+              <img src="assets/browser-analyst.webp" width="1624" height="1016" loading="lazy" decoding="async"
+                   alt="Browser Analyst answering how flipper length relates to body mass for penguin species. Each agent step shows the SQL it ran and the result table; a trace panel lists every model and tool call with latency and token counts.">
+            </a>
+            <div class="project-intro">
+              <p class="tag"><span>02</span> Agents · Tool calling &amp; security</p>
+              <h3 id="ba-title">Browser Analyst</h3>
+              <p class="pitch">
+                A data-analyst agent that writes and runs SQL and Python in your browser, repairs its own errors, draws charts,
+                and links every number in its answer to the result cell that produced it. Your file never leaves the tab.
+              </p>
+              <dl class="metrics">
+                <div><dt>Task success</dt><dd>94%</dd><p>100 questions, 10 categories</p></div>
+                <div><dt>Data exfiltrated</dt><dd>0</dd><p>24 prompt-injection attacks, CSP on</p></div>
+                <div><dt>Numbers traced</dt><dd>99%</dd><p>of answers match their cited cells</p></div>
+              </dl>
+              <div class="links">
+                <a class="btn btn-primary btn-small" href="https://browser-analyst.azar-majed7.workers.dev" target="_blank" rel="noopener">Live demo <span aria-hidden="true">↗</span></a>
+                <a class="btn btn-small" href="https://youtu.be/ECeh_A207S0" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>1-minute video</a>
+                <a class="btn btn-small" href="https://browser-analyst.azar-majed7.workers.dev/security" target="_blank" rel="noopener">Red-team results <span aria-hidden="true">↗</span></a>
+                <a class="btn btn-small btn-ghost" href="https://github.com/MidlightDDK/browser-analyst" target="_blank" rel="noopener">
+                  <svg class="fill" viewBox="0 0 16 16" aria-hidden="true"><use href="#i-github"/></svg>Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <div class="built">
+              <h4>What I built</h4>
+              <ul class="checks">
+                <li>An agent loop that runs SQL in <strong>DuckDB-WASM</strong> and Python in <strong>Pyodide</strong>, both in Web Workers. Results stay in the tab; the model sees only schemas, profiles, and 20-row previews.</li>
+                <li>Layered defenses: a read-only SQL guard (65 unit cases), engine lockdown, approval before any Python runs, spotlighting plus an injection detector, and a Content-Security-Policy as egress control.</li>
+                <li>A reproducible benchmark with cached model calls, full traces, and token accounting. The CI gate <strong>blocked a prompt change that passed every unit test</strong> but dropped the smoke split to 8/15.</li>
+                <li>A tier-0 cascade test with my own fine-tuned model (PocketSQL): 30% fewer LLM calls but 8 points lower success, so the live app doesn't use it.</li>
+              </ul>
+              <ul class="stack" aria-label="Tech stack">
+                <li>TypeScript</li><li>React</li><li>DuckDB-WASM</li><li>Pyodide</li><li>Vega-Lite</li><li>Gemini · Groq APIs</li><li>Cloudflare Workers</li><li>Playwright</li>
+              </ul>
+            </div>
+            <div class="evidence">
+              <figure class="chart">
+                <figcaption>
+                  <strong>Benchmarked across free models</strong>
+                  <span>Task success on 100 questions, same agent code and settings.</span>
+                </figcaption>
+                <table>
+                  <thead class="sr-only"><tr><th scope="col">Model</th><th scope="col">Task success</th></tr></thead>
+                  <tbody>
+                    <tr class="is-hl"><th scope="row">gemini-3.5-flash-lite <em>live</em></th><td><span class="bar" style="--v:94"></span><span class="val">94%</span></td></tr>
+                    <tr><th scope="row">gemini-3.1-flash-lite</th><td><span class="bar" style="--v:94"></span><span class="val">94%</span></td></tr>
+                    <tr><th scope="row">gemma-4-26b-a4b-it</th><td><span class="bar" style="--v:88"></span><span class="val">88%</span></td></tr>
+                  </tbody>
+                </table>
+              </figure>
+              <p class="lesson"><strong>What didn't work:</strong> knowing when to ask. On 8 deliberately ambiguous questions, models asked for clarification at most 3 times. It's the weakest category, and the README reports it rather than hiding it.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- PocketSQL -->
+        <article class="project" id="pocketsql" aria-labelledby="ps-title">
+          <div class="project-top">
+            <a class="shot" href="https://pocket-sql.azar-majed7.workers.dev" target="_blank" rel="noopener">
+              <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span class="shot-url">pocket-sql.azar-majed7.workers.dev</span></span>
+              <img src="assets/pocketsql.webp" width="1552" height="970" loading="lazy" decoding="async"
+                   alt="PocketSQL answering which five billing countries have the most revenue: the model's DuckDB SQL query, an editable Run SQL button, and a bar chart of the result with the USA first.">
+            </a>
+            <div class="project-intro">
+              <p class="tag"><span>03</span> Fine-tuning · On-device inference</p>
+              <h3 id="ps-title">PocketSQL</h3>
+              <p class="pitch">
+                A 0.5B text-to-SQL model I fine-tuned with LoRA and shipped to the browser. It writes DuckDB SQL on your GPU
+                through WebGPU, costs $0 per query, and keeps working with Wi-Fi off.
+              </p>
+              <dl class="metrics">
+                <div><dt>SQL accuracy</dt><dd><span class="from">30.9</span>→49.3%</dd><p>execution match, 981 Spider-dev questions</p></div>
+                <div><dt>Model size</dt><dd>276 MiB</dd><p>4-bit ONNX, WebGPU with WASM fallback</p></div>
+                <div><dt>Training compute</dt><dd>61 min</dd><p>one free Kaggle T4 GPU</p></div>
+              </dl>
+              <div class="links">
+                <a class="btn btn-primary btn-small" href="https://pocket-sql.azar-majed7.workers.dev" target="_blank" rel="noopener">Live demo <span aria-hidden="true">↗</span></a>
+                <a class="btn btn-small" href="https://youtu.be/Xn-_7zZTkJo" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>1-minute video</a>
+                <a class="btn btn-small" href="https://huggingface.co/MidlightDDK/pocketsql-0.5b" target="_blank" rel="noopener">Model on Hugging Face <span aria-hidden="true">↗</span></a>
+                <a class="btn btn-small btn-ghost" href="https://github.com/MidlightDDK/pocketsql" target="_blank" rel="noopener">
+                  <svg class="fill" viewBox="0 0 16 16" aria-hidden="true"><use href="#i-github"/></svg>Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <div class="built">
+              <h4>What I built</h4>
+              <ul class="checks">
+                <li>The dataset: <strong>7,376 Spider pairs</strong> converted to DuckDB and kept only when results match SQLite, plus <strong>591 synthetic pairs</strong> kept only when independent models' queries agree.</li>
+                <li>A LoRA fine-tune of Qwen2.5-Coder-0.5B with PyTorch, TRL, and PEFT, merged and exported to 4-bit ONNX (q4f16 for WebGPU, q4 for WASM). The fp32 export matches PyTorch on 20/20 parity prompts.</li>
+                <li>A release gate: a model ships only if the exact file the browser downloads beats the base model and the previous release. A weekly job re-checks it, and an offline end-to-end test loads the real model, cuts the network, and answers.</li>
+                <li>A local-first cascade: on Spider dev it <strong>beats a 120B API model alone (75% vs 73%) with 59% fewer API calls</strong>.</li>
+              </ul>
+              <ul class="stack" aria-label="Tech stack">
+                <li>PyTorch</li><li>Transformers</li><li>PEFT</li><li>TRL</li><li>ONNX</li><li>Transformers.js</li><li>WebGPU</li><li>DuckDB-WASM</li>
+              </ul>
+            </div>
+            <div class="evidence">
+              <figure class="chart">
+                <figcaption>
+                  <strong>Fine-tuning, measured on the shipped artifact</strong>
+                  <span>Execution accuracy of the 4-bit browser model, before and after.</span>
+                </figcaption>
+                <table>
+                  <thead class="sr-only"><tr><th scope="col">Test set and model</th><th scope="col">Execution accuracy</th></tr></thead>
+                  <tbody>
+                    <tr class="group"><th scope="rowgroup" colspan="2">Spider dev · 981 questions</th></tr>
+                    <tr><th scope="row">Base model</th><td><span class="bar" style="--v:30.9"></span><span class="val">30.9%</span></td></tr>
+                    <tr class="is-hl"><th scope="row">PocketSQL</th><td><span class="bar" style="--v:49.3"></span><span class="val">49.3%</span></td></tr>
+                    <tr class="group"><th scope="rowgroup" colspan="2">Demo databases · 100 questions</th></tr>
+                    <tr><th scope="row">Base model</th><td><span class="bar" style="--v:29"></span><span class="val">29%</span></td></tr>
+                    <tr class="is-hl"><th scope="row">PocketSQL</th><td><span class="bar" style="--v:45"></span><span class="val">45%</span></td></tr>
+                  </tbody>
+                </table>
+              </figure>
+              <p class="lesson"><strong>What didn't work:</strong> training on Spider alone (v1) raised Spider-dev accuracy but dropped the demo-database test from 29% to 20%. The release gate refused it; 591 targeted synthetic pairs fixed it in v2.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ APPROACH ============ -->
+    <section class="section section-alt" id="approach" aria-labelledby="approach-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">How I work</p>
+          <h2 id="approach-title">Engineering habits that transfer to your team</h2>
+          <p class="section-lede">A demo that works once is easy. These are the habits that keep AI features correct after launch, each backed by a project above.</p>
+        </header>
+        <ol class="principles">
+          <li>
+            <h3>Measure on held-out data</h3>
+            <p>I split eval sets before tuning and keep test data out of training; PocketSQL checks for leakage in CI. FilingLens' test split ran exactly once, for the release numbers.</p>
+          </li>
+          <li>
+            <h3>Gate quality in CI</h3>
+            <p>Retrieval recall, agent success, and model accuracy all have regression gates. One caught a prompt edit that passed every unit test but cut agent success nearly in half.</p>
+          </li>
+          <li>
+            <h3>Design for untrusted input</h3>
+            <p>Prompt injection is a given. I layer SQL guards, execution approval, spotlighting, and CSP egress control, then red-team each defense on its own.</p>
+          </li>
+          <li>
+            <h3>Ship it, then keep it running</h3>
+            <p>All three apps are live, with daily smoke tests that open an issue on failure. Browser Analyst's build fails if first-load JavaScript passes 300 KB, and two of the apps score 99 on Lighthouse's mobile performance audit.</p>
+          </li>
+          <li>
+            <h3>Keep costs honest</h3>
+            <p>In-browser retrieval and inference, provider fallback chains, and answer caching mean all three run for $0/month, and degrade gracefully when free quotas run out.</p>
+          </li>
+          <li>
+            <h3>Report what didn't work</h3>
+            <p>A reranker that hurt recall, a training run the gate rejected, a model that wouldn't ask for clarification: I write down failures so the next decision is better.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience" aria-labelledby="exp-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Experience</p>
+          <h2 id="exp-title">4+ years shipping production software</h2>
+        </header>
+        <div class="exp">
+          <article class="job">
+            <div class="job-head">
+              <div>
+                <h3>Unity Developer</h3>
+                <p class="org">Terahard Ltd · London, UK · Remote</p>
+              </div>
+              <p class="when"><time datetime="2022-07">July 2022</time> – Present</p>
+            </div>
+            <ul class="checks">
+              <li>Develop and maintain C# systems in commercial PC and mobile codebases, taking features from requirements through implementation, testing, optimization, and release.</li>
+              <li>Resolve performance and integration issues in production code.</li>
+              <li>Collaborate with engineering, design, art, and QA through remote planning, code reviews, debugging, and ongoing maintenance.</li>
+            </ul>
+          </article>
+          <aside class="carry">
+            <h3>What carries over to AI engineering</h3>
+            <p>Four years of owning features in shared commercial codebases taught me the parts of the job a demo never does: reading code I didn't write, tracking down performance problems on mobile hardware, reviewing and being reviewed, and maintaining what I ship.</p>
+            <p>The same habits run through my AI work, from download-size budgets for in-browser models to the CI gates and daily smoke tests on every live app.</p>
+          </aside>
+        </div>
+
+        <div class="cards" aria-label="Education and recognition">
+          <div class="card">
+            <p class="card-label">Education</p>
+            <h3>Master of Science in Information Technology</h3>
+            <p>University of the People · 2026</p>
+          </div>
+          <div class="card">
+            <p class="card-label">Competitive programming</p>
+            <h3>Dev Champion 2022</h3>
+            <p>5th in Africa · 2nd in Togo</p>
+          </div>
+          <div class="card">
+            <p class="card-label">Languages &amp; availability</p>
+            <h3>English &amp; French</h3>
+            <p>Native or bilingual · UTC+0, flexible time-zone coverage</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Skills</p>
+          <h2 id="skills-title">Toolbox, used in production-style projects</h2>
+        </header>
+        <div class="skills">
+          <div class="skill-group">
+            <h3>AI &amp; ML</h3>
+            <ul class="stack">
+              <li>PyTorch</li><li>Hugging Face Transformers</li><li>PEFT</li><li>TRL</li><li>LoRA</li><li>LLM APIs</li><li>Prompt engineering</li><li>Embeddings</li><li>Hybrid search</li><li>Tool calling</li><li>Model evaluation</li><li>ONNX</li><li>Quantization</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <ul class="stack">
+              <li>Python</li><li>TypeScript</li><li>SQL</li><li>C#</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Engineering</h3>
+            <ul class="stack">
+              <li>DuckDB</li><li>React</li><li>Cloudflare Workers</li><li>WebGPU</li><li>WebAssembly</li><li>Git</li><li>GitHub Actions</li><li>pytest</li><li>Playwright</li><li>CI/CD</li><li>Debugging</li><li>Performance optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-inner">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Hiring for an AI engineer? Let's talk.</h2>
+        <p class="section-lede">I'm looking for full-time AI Engineer roles, remote from Lomé (UTC+0). Email is the fastest way to reach me.</p>
+        <div class="email-row">
+          <a class="btn btn-primary btn-large" href="mailto:majed.azar7@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+            majed.azar7@gmail.com
+          </a>
+          <button class="btn btn-large" type="button" id="copy-email" data-email="majed.azar7@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+            <span>Copy address</span>
+          </button>
+        </div>
+        <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+        <ul class="social">
+          <li><a href="https://www.linkedin.com/in/azarmajed" target="_blank" rel="noopener">
+            <svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn</a></li>
+          <li><a href="https://github.com/MidlightDDK" target="_blank" rel="noopener">
+            <svg class="fill" viewBox="0 0 16 16" aria-hidden="true"><use href="#i-github"/></svg>
+            GitHub</a></li>
+          <li><a href="https://huggingface.co/MidlightDDK" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1.8 2 5.2 2 7 0"/><circle class="fill" cx="9" cy="10" r="1"/><circle class="fill" cx="15" cy="10" r="1"/></svg>
+            Hugging Face</a></li>
+          <li><a href="Majed-Saliou-Azar-Resume.pdf" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
+            Résumé (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> Majed Saliou Azar</p>
+      <p>Hand-written HTML and CSS, no framework, hosted for $0 on GitHub Pages. <a href="https://github.com/MidlightDDK/portfolio">Source</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

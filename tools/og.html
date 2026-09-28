@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OG image</title>
+  <!-- Source for site/og.png (1200x630 link-preview image). Rebuild with: node tools/render.mjs -->
+  <style>
+    html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+    body {
+      box-sizing: border-box;
+      padding: 64px 72px;
+      display: flex;
+      flex-direction: column;
+      background:
+        radial-gradient(rgb(255 255 255 / 0.06) 1px, transparent 1px) 0 0 / 22px 22px,
+        #0d0f12;
+      color: #eceef1;
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    }
+    .mono { font-family: "Cascadia Mono", Consolas, "SF Mono", Menlo, monospace; }
+    .top { display: flex; align-items: center; gap: 16px; }
+    .mark {
+      display: grid; place-items: center;
+      width: 52px; height: 52px; border-radius: 13px;
+      background: #eceef1; color: #0d0f12;
+      font-size: 20px; font-weight: 700;
+    }
+    .who { font-size: 26px; font-weight: 600; }
+    .role { color: #8f97a3; font-size: 20px; margin-top: 2px; }
+    h1 {
+      margin: 52px 0 0;
+      font-size: 66px; line-height: 1.04; letter-spacing: -0.035em; font-weight: 750;
+    }
+    h1 span { color: #3ddc97; }
+    .sub { margin-top: 18px; color: #b8bec7; font-size: 24px; }
+    .stats { display: flex; gap: 16px; margin-top: auto; }
+    .stat {
+      flex: 1;
+      padding: 18px 20px;
+      border: 1px solid #252a31; border-radius: 14px;
+      background: #15181d;
+    }
+    .stat b { display: block; font-size: 34px; letter-spacing: -0.02em; }
+    .stat b i { font-style: normal; color: #8f97a3; font-size: 24px; font-weight: 500; }
+    .stat span { display: block; margin-top: 4px; color: #8f97a3; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div class="mark mono">MA</div>
+    <div>
+      <div class="who">Majed Saliou Azar</div>
+      <div class="role mono">AI Engineer · LLM apps · RAG · Fine-tuning</div>
+    </div>
+  </div>
+  <h1>I build AI systems that<br><span>show their work.</span></h1>
+  <p class="sub">Three live AI apps, each with held-out evals and CI quality gates.</p>
+  <div class="stats">
+    <div class="stat"><b>85.5%</b><span class="mono">FilingLens · RAG recall@10</span></div>
+    <div class="stat"><b>94%</b><span class="mono">Browser Analyst · agent success</span></div>
+    <div class="stat"><b><i>30.9 →</i> 49.3%</b><span class="mono">PocketSQL · after fine-tuning</span></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Personal, machine-specific Claude Code settings (Windows sound hooks)
+.claude/
+
+# Private source résumé (includes a phone number); the public version is tools/resume.html
+resume.txt
