@@ -1,6 +1,6 @@
 # Majed Saliou Azar · AI Engineer portfolio
 
-**Live site: [midlightddk.github.io/portfolio](https://midlightddk.github.io/portfolio/)**
+**Live site: [midlightddk.github.io](https://midlightddk.github.io/)**
 
 Portfolio for my AI engineering work. Each project is live and has its own held-out evals:
 
