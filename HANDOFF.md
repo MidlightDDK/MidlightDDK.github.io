@@ -44,6 +44,8 @@ tools/                         sources for generated files (not deployed)
 
 ## How to make changes
 
+- **Keep this file current.** It's the handoff for later sessions: update it whenever a decision or open item changes, and commit it.
+
 - **Preview:** open `site/index.html` in a browser.
 - **Edit content:** edit `site/index.html` directly.
 - **Update the résumé, preview image or icon:** edit the file in `tools/`, then run `node tools/render.mjs`. It needs Chrome or Edge installed, or a `CHROME_PATH` pointing to one.
@@ -53,10 +55,9 @@ tools/                         sources for generated files (not deployed)
 ## Decisions and status
 
 1. **Contact email:** `majed.azar7@gmail.com` (the résumé's address) is correct. Don't change it.
-2. **GitHub profile:** done: descriptions, homepage links and topics on `filinglens`, `browser-analyst` and `pocketsql`, plus a profile README (`MidlightDDK/MidlightDDK`) aligned with the résumé. Still open:
-   - Set name "Majed Saliou Azar", bio "AI Engineer: RAG, agents, fine-tuning" and website `https://midlightddk.github.io/`. The `gh` token lacks the `user` scope; run `gh auth refresh -h github.com -s user` first, or edit at github.com/settings/profile.
-   - Pin the three project repos. There's no API for this; use "Customize your pins" on the profile.
+2. **GitHub profile:** done: descriptions, homepage links and topics on `filinglens`, `browser-analyst` and `pocketsql`; a profile README (`MidlightDDK/MidlightDDK`) aligned with the résumé; and the profile name, bio and website (set by the user). Still open:
+   - Pin the three project repos (none pinned as of 2026-09-28). There's no API for this; use "Customize your pins" on the profile. Check with `gh api graphql -f query='{user(login:"MidlightDDK"){pinnedItems(first:6){nodes{... on Repository{name}}}}}'`.
 3. **Root URL:** done. The repo is `MidlightDDK.github.io` and every absolute URL points to `https://midlightddk.github.io/`.
-4. **Portfolio link elsewhere:** the user does this manually: LinkedIn contact info and Featured section, `resume.txt` and any Word/PDF copies, and anywhere the old `/portfolio/` link was shared.
+4. **Portfolio link elsewhere:** `resume.txt` now has it. The user is updating LinkedIn (contact info and Featured section) themselves; also any Word/PDF résumé copies and anywhere the old `/portfolio/` link was shared. `resume.txt` is not the render source: the site PDF is built from `tools/resume.html`, so mirror any `resume.txt` edits there (minus the phone number) before running `node tools/render.mjs`.
 5. **Phone number:** never on the public site or PDF.
 6. **Numbers:** sync only when the user asks after rerunning a project's evals. Figures live in `site/index.html` (hero card, metric tiles, charts), `tools/og.html`, `tools/resume.html` (then rerun `node tools/render.mjs`), the three repo descriptions and the profile README.
