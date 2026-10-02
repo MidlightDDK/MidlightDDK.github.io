@@ -21,13 +21,14 @@ site/            everything that gets deployed
   styles.css     styles (light and dark themes)
   main.js        theme toggle, copy-email button, chart and nav animations
   assets/        screenshots of the live demos
+  Majed-Saliou-Azar-Resume.pdf  résumé (added as-is, not generated)
 tools/           sources for generated files (not deployed)
-  resume.html    → site/Majed-Saliou-Azar-Resume.pdf
   og.html        → site/og.png (link-preview image)
   icon.html      → site/apple-touch-icon.png
-  render.mjs     renders the three files above with headless Chrome or Edge
+  render.mjs     renders the two files above with headless Chrome or Edge
 ```
 
 - **Preview locally:** open `site/index.html` in a browser.
-- **Update the résumé, preview image, or icon:** edit the file in `tools/`, then run `node tools/render.mjs`.
+- **Update the résumé:** replace `site/Majed-Saliou-Azar-Resume.pdf`.
+- **Update the preview image or icon:** edit the file in `tools/`, then run `node tools/render.mjs`.
 - **Deploy:** push to `main`. `.github/workflows/pages.yml` publishes `site/` to GitHub Pages.

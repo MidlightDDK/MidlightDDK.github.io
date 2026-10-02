@@ -1,7 +1,7 @@
 # Personal, machine-specific Claude Code settings (Windows sound hooks)
 .claude/
 
-# Private source résumé (includes a phone number); the public version is tools/resume.html
+# Private source résumé
 resume.txt
 
 # Private LinkedIn update plan (the repo is public)

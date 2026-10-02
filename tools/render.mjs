@@ -4,9 +4,8 @@
 //   node tools/render.mjs
 //
 // Outputs:
-//   site/Majed-Saliou-Azar-Resume.pdf  <- tools/resume.html
-//   site/og.png                        <- tools/og.html   (link-preview image, 1200x630)
-//   site/apple-touch-icon.png          <- tools/icon.html (180x180)
+//   site/og.png               <- tools/og.html   (link-preview image, 1200x630)
+//   site/apple-touch-icon.png <- tools/icon.html (180x180)
 
 import { execFileSync } from 'node:child_process';
 import { existsSync } from 'node:fs';
@@ -36,8 +35,7 @@ function run(args) {
   execFileSync(chrome, ['--headless=new', '--disable-gpu', '--hide-scrollbars', '--no-first-run', ...args], { stdio: 'inherit' });
 }
 
-run(['--no-pdf-header-footer', `--print-to-pdf=${join(site, 'Majed-Saliou-Azar-Resume.pdf')}`, src('resume.html')]);
 run(['--window-size=1200,630', `--screenshot=${join(site, 'og.png')}`, src('og.html')]);
 run(['--window-size=180,180', `--screenshot=${join(site, 'apple-touch-icon.png')}`, src('icon.html')]);
 
-console.log('Rendered résumé PDF, og.png, and apple-touch-icon.png into site/.');
+console.log('Rendered og.png and apple-touch-icon.png into site/.');
